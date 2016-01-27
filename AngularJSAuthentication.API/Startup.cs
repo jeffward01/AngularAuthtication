@@ -31,7 +31,6 @@ namespace AngularJSAuthentication.API
             app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
             app.UseWebApi(config);
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<AuthContext, AngularJSAuthentication.API.Migrations.Configuration>());
-
         }
 
         public void ConfigureOAuth(IAppBuilder app)
