@@ -37,7 +37,6 @@ namespace AngularJSAuthentication.API.Controllers
                 return Ok();
             }
             return BadRequest("Token Id does not exist");
-            
         }
 
         protected override void Dispose(bool disposing)

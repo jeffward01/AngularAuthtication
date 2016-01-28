@@ -25,7 +25,6 @@ namespace AngularJSAuthentication.API.Models
 
          [Required]
          public string ExternalAccessToken { get; set; }
-
     }
 
     public class ParsedExternalAccessToken
