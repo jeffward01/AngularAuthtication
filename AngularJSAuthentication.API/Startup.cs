@@ -21,6 +21,7 @@ namespace AngularJSAuthentication.API
         public static GoogleOAuth2AuthenticationOptions googleAuthOptions { get; private set; }
         public static FacebookAuthenticationOptions facebookAuthOptions { get; private set; }
 
+
         public void Configuration(IAppBuilder app)
         {
             HttpConfiguration config = new HttpConfiguration();
@@ -52,6 +53,9 @@ namespace AngularJSAuthentication.API
             app.UseOAuthAuthorizationServer(OAuthServerOptions);
             app.UseOAuthBearerAuthentication(OAuthBearerOptions);
 
+            //Configure Java Global DB External Login
+
+
             //Configure Google External Login
             googleAuthOptions = new GoogleOAuth2AuthenticationOptions()
             {
@@ -70,6 +74,7 @@ namespace AngularJSAuthentication.API
             };
             app.UseFacebookAuthentication(facebookAuthOptions);
 
+            
         }
     }
 
